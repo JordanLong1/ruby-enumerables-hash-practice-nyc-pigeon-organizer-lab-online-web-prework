@@ -25,7 +25,3 @@ value.each do |pigeon_name|
   end
   pigeon_list
 end
-
-
-
-end
