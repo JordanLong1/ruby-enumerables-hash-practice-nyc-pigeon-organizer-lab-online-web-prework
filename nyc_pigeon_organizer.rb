@@ -1,27 +1,23 @@
-require 'pry'
 def nyc_pigeon_organizer(data)
-pigeon_list = Hash.new
-
-data.each do |key, value|
-
-pigeon_data_key = key
-value.each do |key, value|
-
-  pigeon_data_value = key
-value.each do |pigeon_name|
-
-
-        if pigeon_list.has_key?(pigeon_name)
-          pigeon_list[pigeon_name] = Hash.new
+  # write your code here!
+  new_hash = {}
+  data.each do |property, hash|
+    hash.each do |attribute, array|
+      array.each do |name|
+        if !new_hash.has_key?(name)
+          new_hash[name] = {}
         end
 
-        if !pigeon_list[pigeon_name].has_key?(pigeon_data_key)
-          pigeon_list[pigeon_name][pigeon_data_key] = Array.new
+        if !new_hash[name].has_key?(property)
+          new_hash[name][property] = []
         end
 
-        pigeon_list[pigeon_name][pigeon_data_key] << pigeon_data_value.to_s
+        if !new_hash[name][property].include?(attribute)
+          new_hash[name][property] << attribute.to_s
+        end
       end
     end
   end
-  pigeon_list
+  new_hash
 end
+© 2019 GitHub, Inc.
