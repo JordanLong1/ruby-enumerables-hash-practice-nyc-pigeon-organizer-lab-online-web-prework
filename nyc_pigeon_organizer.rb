@@ -27,6 +27,12 @@ value.each do |pigeon_name|
       if yes add previously stored key (variable A) | value (variable B) pair directly to the correct pigeon in the pigeon list
 
         if pigeon_list[pigeon_name].has_key[pigeon_name]
+          pigeon_list[pigeon_name] = Hash.new
+        end
+        pigeon_list[pigeon_name]
+      end
+    end
+  end
 
 
 
