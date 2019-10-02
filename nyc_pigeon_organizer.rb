@@ -13,6 +13,7 @@ value.each do |pigeon_name|
 
         if pigeon_list.has_key?(pigeon_name)
           pigeon_list[pigeon_name] = Hash.new
+        end
 
         if !pigeon_list[pigeon_name].has_key?(pigeon_data_key)
           pigeon_list[pigeon_name][pigeon_data_key] = Array.new
@@ -23,7 +24,7 @@ value.each do |pigeon_name|
     end
   end
   pigeon_list
-end      
+end
 
 
 
